@@ -48,7 +48,7 @@ var buttons = [
     
 ];
 
-// Add event listener for keyboard events
+
 document.addEventListener('keydown', event => {
     const key = event.key;
     const validKeys = buttons.map(btn => btn.key);
@@ -106,21 +106,21 @@ function calculate() {
     document.getElementById('result').value = result;
 }
 
-// Added function to handle backspace button click
+
 function handleBackspace() {
     var currentValue = document.getElementById('result').value;
     document.getElementById('result').value = currentValue.slice(0, -1);
 }
 
-// Added function to append decimal point
+
 function appendDecimal() {
     var result = document.getElementById('result').value;
-    if (result.indexOf('.') === -1) { // Ensure there's no existing decimal point
+    if (result.indexOf('.') === -1) { 
         document.getElementById('result').value += '.';
     }
 }
 
-// Added function to handle button clicks and keyboard events
+
 function handleButtonClick(value) {
     const result = document.getElementById('result');
     if (value === 'C') {
